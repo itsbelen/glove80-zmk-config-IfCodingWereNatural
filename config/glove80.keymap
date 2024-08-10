@@ -460,7 +460,7 @@
     combos {
         compatible = "zmk,combos";
 
-        toggle_layer1 {
+        toggle_tomaya {
             bindings = <&rgb_to_maya>;
             key-positions = <66 67 68>;
             layers = <0>;
@@ -484,7 +484,6 @@
         to_base {
             bindings = <&rgb_tog_layer0>;
             key-positions = <67 68 66>;
-            layers = <7>;
             require-prior-idle-ms = <150>;
         };
 
