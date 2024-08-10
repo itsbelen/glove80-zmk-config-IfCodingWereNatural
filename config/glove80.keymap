@@ -132,7 +132,7 @@
             label = "LAYER_TAP_DANCE";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mo 1>, <&to 1>;
+            bindings = <&mo 7>, <&to 7>;
         };
 
         rpi: require_prior_idle {
@@ -244,7 +244,7 @@
                 <&macro_tap>,
                 <&to 0>,
                 <&macro_tap>,
-                <&rgb_ug RGB_COLOR_HSB(230,95,23)>;
+                <&rgb_ug RGB_COLOR_HSB(270,100,27)>;
 
             label = "RGB_LAYER0";
         };
@@ -254,7 +254,7 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_tap>,
-                <&to 1>,
+                <&to 7>,
                 <&macro_tap>,
                 <&rgb_ug RGB_COLOR_HSB(126,100,33)>;
 
@@ -266,16 +266,129 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&mo 6>,
+                <&mo 8>,
                 <&macro_tap>,
                 <&rgb_ug RGB_COLOR_HSB(233,99,30)>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&mo 6>,
+                <&mo 8>,
                 <&macro_tap>,
                 <&rgb_ug RGB_COLOR_HSB(131,100,30)>;
 
             label = "RGB_MO_LAYER6";
+        };
+
+        BoldItalics: BoldItalics {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(B) &kp LC(I)>;
+            label = "BOLDITALICS";
+        };
+
+        mo_rgb_num: mo_rgb_maya {
+            compatible = "zmk,behavior-macro";
+            label = "MO_RGB_MAYA";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&mo 2>,
+                <&macro_tap>,
+                <&rgb_ug RGB_COLOR_HSB(56,100,32)>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&mo 2>,
+                <&macro_tap>,
+                <&rgb_ug RGB_COLOR_HSB(265,100,27)>;
+        };
+
+        rgb_to_maya: rgb_to_maya {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&to 3>,
+                <&macro_tap>,
+                <&rgb_ug RGB_COLOR_HSB(184,100,33)>;
+
+            label = "RGB_TO_MAYA";
+        };
+
+        EmojiBigSMILE: Emoji {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp COLON &kp SPACE &kp RS(D)>;
+            label = "EMOJI";
+        };
+
+        EmojiSmile: EmojiSmil {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp COLON &kp SPACE &kp RS(N0)>;
+            label = "EMOJISMIL";
+        };
+
+        EmojiBigSad: EmojiBigSad {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp D &kp SPACE &kp COLON>;
+            label = "EMOJIBIGSAD";
+        };
+
+        EmojiMeh: EmojiMeh {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp COLON &kp SPACE &kp SLASH>;
+            label = "EMOJIMEH";
+        };
+
+        mo_rgb_maya2num: mo_rgb_maya2num {
+            compatible = "zmk,behavior-macro";
+            label = "MO_RGB_MAYA2NUM";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&mo 2>,
+                <&macro_tap>,
+                <&rgb_ug RGB_COLOR_HSB(56,100,32)>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&mo 2>,
+                <&macro_tap>,
+                <&rgb_ug RGB_COLOR_HSB(182,100,28)>;
+        };
+
+        mo_rgb_maya2nav: mo_rgb_maya2nav {
+            compatible = "zmk,behavior-macro";
+            label = "MO_RGB_MAYA2NAV";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&mo 2>,
+                <&macro_tap>,
+                <&rgb_ug RGB_COLOR_HSB(117,100,32)>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&mo 2>,
+                <&macro_tap>,
+                <&rgb_ug RGB_COLOR_HSB(182,100,28)>;
+        };
+
+        rgb_to_num: rgb_to_num {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&to 2>,
+                <&macro_tap>,
+                <&rgb_ug RGB_COLOR_HSB(67,100,29)>;
+
+            label = "RGB_TO_NUM";
         };
     };
 };
@@ -329,12 +442,12 @@
         #binding-cells = <0>;
         bindings =
             <&macro_press>,
-            <&mo 4>,
+            <&mo 6>,
             <&macro_tap>,
             <&rgb_ug RGB_COLOR_HSB(128,100,100)>,
             <&macro_pause_for_release>,
             <&macro_release>,
-            <&mo 4>,
+            <&mo 6>,
             <&macro_tap>,
             <&rgb_ug RGB_COLOR_HSB(300,100,50)>;
     };
@@ -348,7 +461,7 @@
         compatible = "zmk,combos";
 
         toggle_layer1 {
-            bindings = <&rgb_tog_layer1>;
+            bindings = <&rgb_to_maya>;
             key-positions = <66 67 68>;
             layers = <0>;
             require-prior-idle-ms = <150>;
@@ -371,14 +484,14 @@
         to_base {
             bindings = <&rgb_tog_layer0>;
             key-positions = <66 67 68>;
-            layers = <1>;
+            layers = <7>;
             require-prior-idle-ms = <150>;
         };
 
         magic_layer {
-            bindings = <&magic 4 0>;
+            bindings = <&magic 6 0>;
             key-positions = <68 65>;
-            layers = <0 1>;
+            layers = <0 7>;
             require-prior-idle-ms = <200>;
         };
     };
@@ -388,24 +501,104 @@
 
         layer_Base {
             bindings = <
-&kp LC(UP)      &kp C_BRI_DN    &kp C_BRI_UP     &kp LG(SPACE)        &kp F5                                                                                                                  &kp F6             &kp C_PREV            &kp C_PP         &kp PRINTSCREEN  &kp F11
-&kp EQUAL       &kp N1          &kp N2           &kp N3               &kp N4             &kp N5                                                                                       &kp N6  &kp N7             &kp N8                &kp N9           &kp N0           &kp MINUS
-&kp TAB         &kp Q           &kp W            &kp E                &kp R              &kp T                                                                                        &kp Y   &kp U              &kp I                 &kp O            &kp P            &kp BSLH
-&kp MINUS       &qt LEFT_WIN A  &hml LEFT_WIN S  &hml LEFT_CONTROL D  &hml LEFT_SHIFT F  &kp G                                                                                        &kp H   &hmr LEFT_SHIFT J  &hmr RIGHT_CONTROL K  &hmr LEFT_WIN L  &lt 2 SEMICOLON  &kp SQT
-&kp LEFT_SHIFT  &kp Z           &kp X            &kp C                &kp V              &kp B   &kp LEFT_SHIFT  &lower     &magic 4 0       &kp CAPSLOCK  &caps_word     &kp ESCAPE  &kp N   &kp M              &kp COMMA             &kp DOT          &kp FSLH         &kp LG(LA(RIGHT))
-&kp LCTRL       &kp LEFT_ALT    &kp HOME         &kp END              &kp LGUI                   &mo 3           &kp ENTER  &rgb_tog_layer1  &amethyst_td  &kp BACKSPACE  &kp SPACE           &kp LEFT           &kp DOWN              &kp UP           &kp RIGHT        &kp ENTER
+&kp ESCAPE      &kp C_BRI_DN   &kp C_BRI_UP     &kp LG(SPACE)        &kp F5                                                                                                               &kp F6             &kp C_PREV            &kp C_PP         &kp PRINTSCREEN     &kp F11
+&kp EQUAL       &kp N1         &kp N2           &kp N3               &kp N4             &kp N5                                                                                    &kp N6  &kp N7             &kp N8                &kp N9           &kp N0              &kp MINUS
+&kp TAB         &kp Q          &kp W            &kp E                &kp R              &kp T                                                                                     &kp Y   &kp U              &kp I                 &kp O            &kp P               &mo_rgb_num
+&rgb_to_maya    &kp A          &hml LEFT_WIN S  &hml LEFT_CONTROL D  &hml LEFT_SHIFT F  &kp G                                                                                     &kp H   &hmr LEFT_SHIFT J  &hmr RIGHT_CONTROL K  &hmr LEFT_WIN L  &lt 1 SEMICOLON     &kp SQT
+&kp LEFT_SHIFT  &kp Z          &kp X            &kp C                &kp V              &kp B   &kp RIGHT_ALT   &kp DEL    &magic 6 0    &kp CAPSLOCK  &caps_word     &kp ESCAPE  &kp N   &kp M              &kp COMMA             &kp DOT          &qt FSLH RS(SLASH)  &kp BACKSLASH
+&kp LCTRL       &kp RIGHT_ALT  &kp HOME         &kp END              &kp LGUI                   &kp LEFT_SHIFT  &kp ENTER  &rgb_to_maya  &rgb_to_num   &kp BACKSPACE  &kp SPACE           &kp LEFT           &kp DOWN              &kp UP           &kp RIGHT           &kp ENTER
             >;
         };
 
-        layer_Lower {
+        Emoji_Layer {
             bindings = <
-&rgb_tog_layer0  &kp F2    &kp F3                    &kp F4            &kp F5                                                                                                                           &kp F6      &kp F7        &kp F8        &kp F9           &kp F10
-&kp F1           &kp O     &kp C_PREVIOUS            &kp C_PLAY_PAUSE  &kp C_NEXT                 &kp T                                                                          &kp LEFT_PARENTHESIS   &kp KP_NUM  &kp KP_EQUAL  &kp KP_SLASH  &kp KP_MULTIPLY  &kp F11
-&kp D            &kp N     &kp LS(LG(L))             &kp LG(LA(L))     &kp LA(Y)                  &kp LA(X)                                                                      &kp RIGHT_PARENTHESIS  &kp KP_N7   &kp KP_N8     &kp KP_N9     &kp KP_MINUS     &kp F12
-&kp I            &kp A     &kp LS(LG(LEFT_BRACKET))  &kp LG(B)         &kp LS(LG(RIGHT_BRACKET))  &kp LS(BACKSPACE)                                                              &kp PERCENT            &kp KP_N4   &kp KP_N5     &kp KP_N6     &kp KP_PLUS      &kp K_MUTE
-&kp LSHFT        &kp Z     &kp J                     &kp SPACE         &kp L                      &kp BACKSPACE      &trans  &trans  &trans           &to 2  &trans  &caps_word  &kp COMMA              &kp KP_N1   &kp KP_N2     &kp KP_N3     &kp KP_ENTER     &kp C_VOLUME_UP
-&kp LCTRL        &kp LALT  &kp I                     &kp O             &trans                                        &trans  &trans  &rgb_tog_layer0  &to 6  &trans  &trans                             &kp KP_N0   &kp KP_N0     &kp KP_DOT    &kp KP_ENTER     &kp C_VOL_DN
+&trans  &trans  &trans  &trans  &trans                                                                  &trans        &trans       &trans        &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans        &trans       &trans        &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans        &trans       &trans        &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &kp EXCL      &EmojiSmile  &EmojiSmile   &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp QUESTION  &EmojiMeh    &EmojiBigSad  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans          &trans        &trans       &trans        &trans  &trans
             >;
+        };
+
+        Numpad {
+            bindings = <
+&trans  &trans    &trans     &trans  &trans                                                                                             &trans   &trans  &trans     &trans    &trans
+&trans  &trans    &trans     &trans  &trans   &kp RS(N8)                                                                    &kp RS(N8)  &trans   &trans  &trans     &trans    &trans
+&trans  &kp BSPC  &kp N7     &kp N8  &kp N9   &kp FSLH                                                                      &kp FSLH    &kp N7   &kp N8  &kp N9     &kp BSPC  &trans
+&trans  &kp DEL   &kp N4     &kp N5  &kp N6   &kp EQUAL                                                                     &kp EQUAL   &kp N4   &kp N5  &kp N6     &trans    &trans
+&trans  &trans    &kp N1     &kp N2  &kp N3   &kp MINUS   &kp LC(A)  &kp LC(C)  &kp LC(V)  &kp RC(A)  &kp RC(C)  &kp RC(V)  &kp MINUS   &kp N1   &kp N2  &kp N3     &trans    &trans
+&trans  &trans    &kp ENTER  &kp N0  &kp DOT              &kp RSHFT  &kp ENTER  &kp BSPC   &kp DEL    &kp ENTER  &kp RSHFT              &kp DOT  &kp N0  &kp ENTER  &trans    &trans
+            >;
+        };
+
+        Maya {
+            bindings = <
+&trans  &trans            &trans               &trans               &trans                                                                                          &trans  &trans  &trans  &trans  &trans
+&trans  &trans            &trans               &trans               &trans               &kp F8                                                             &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans            &mt RA(N1) NUMBER_1  &mt N2 RA(NUMBER_2)  &mt N3 RA(NUMBER_4)  &trans                                                             &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &mo_rgb_maya2num  &kp W                &kp E                &kp R                &kp S                                                              &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &mo_rgb_maya2nav  &mt A LEFT_BRACKET   &mt F RIGHT_BRACKET  &kp MINUS            &kp EQUAL  &kp X     &kp C      &kp SPACE  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp BSLH          &kp LCTRL            &kp RA(V)            &kp RSHFT                       &kp RALT  &kp RC(Z)  &kp LC(Y)  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        nav {
+            bindings = <
+&trans  &trans  &trans          &trans          &trans                                                                                                 &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans          &trans          &trans           &trans                                                                        &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans          &trans          &trans           &trans                                                                        &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans          &kp UP_ARROW    &trans           &kp A                                                                         &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &BoldItalics  &trans            &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp X           &kp C           &kp V                          &kp LEFT_CONTROL  &kp LEFT_WIN  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        maya_num {
+            bindings = <
+&trans  &trans    &trans     &trans  &trans                                                                                             &trans   &trans  &trans     &trans    &trans
+&trans  &trans    &trans     &trans  &trans   &kp RS(N8)                                                                    &kp RS(N8)  &trans   &trans  &trans     &trans    &trans
+&trans  &kp BSPC  &kp N7     &kp N8  &kp N9   &kp FSLH                                                                      &kp FSLH    &kp N7   &kp N8  &kp N9     &kp BSPC  &trans
+&trans  &kp DEL   &kp N4     &kp N5  &kp N6   &kp EQUAL                                                                     &kp EQUAL   &kp N4   &kp N5  &kp N6     &trans    &trans
+&trans  &trans    &kp N1     &kp N2  &kp N3   &kp MINUS   &kp LC(A)  &kp LC(C)  &kp LC(V)  &kp RC(A)  &kp RC(C)  &kp RC(V)  &kp MINUS   &kp N1   &kp N2  &kp N3     &trans    &trans
+&trans  &trans    &kp ENTER  &kp N0  &kp DOT              &kp RSHFT  &kp ENTER  &kp BSPC   &kp DEL    &kp ENTER  &kp RSHFT              &kp DOT  &kp N0  &kp ENTER  &trans    &trans
+            >;
+        };
+
+        layer_Magic {
+            bindings = <
+&to 0        &none            &none            &sys_reset       &bt BT_CLR                                                                                         &bt BT_CLR_ALL   &none  &none  &none  &sys_reset
+&none        &none            &none            &none            &none            &none                                                             &none           &none            &none  &none  &none  &none
+&none        &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI  &rgb_ug RGB_TOG                                                   &rgb_ug RGB_ON  &rgb_ug RGB_OFF  &none  &none  &none  &none
+&none        &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF                                                   &none           &none            &none  &none  &none  &none
+&bootloader  &none            &none            &none            &none            &bootloader      &bt_2  &bt_3  &none         &none  &none  &none  &bootloader     &none            &none  &none  &none  &bootloader
+&none        &none            &none            &none            &none                             &bt_0  &bt_1  &out OUT_USB  &none  &none  &none                  &none            &none  &none  &none  &none
+            >;
+        };
+
+        layer_14 {
+            label = "Games";
+            bindings = <
+&to 0       &trans          &trans     &trans     &trans                                                                                           &trans  &trans  &trans  &trans    &trans
+&kp ESCAPE  &trans          &trans     &trans     &trans        &trans                                                                   &trans    &trans  &trans  &trans  &trans    &trans
+&kp TAB     &kp T           &kp Q      &kp W      &kp E         &kp R                                                                    &trans    &trans  &trans  &trans  &trans    &trans
+&kp G       &kp LEFT_SHIFT  &kp A      &kp S      &kp D         &kp F                                                                    &kp RBKT  &kp J   &kp K   &kp L   &kp SEMI  &trans
+&kp B       &kp LCTRL       &kp Z      &kp X      &kp C         &kp V   &kp LEFT_SHIFT  &trans     &trans        &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans    &kp PG_UP
+&kp LCTRL   &kp LEFT_ALT    &kp PG_DN  &kp PG_UP  &kp LEFT_GUI          &kp SPACE       &kp ENTER  &kp LEFT_WIN  &trans  &trans  &trans            &trans  &trans  &trans  &trans    &kp PG_DN
+            >;
+        };
+
+        layer_Gaming {
+            bindings = <
+&to 0       &trans          &trans     &trans     &trans                                                                                     &trans  &trans  &trans  &trans    &trans
+&kp ESCAPE  &trans          &trans     &trans     &trans        &trans                                                             &trans    &trans  &trans  &trans  &trans    &trans
+&kp TAB     &kp T           &kp Q      &kp W      &kp E         &kp R                                                              &trans    &trans  &trans  &trans  &trans    &trans
+&kp G       &kp LEFT_SHIFT  &kp A      &kp S      &kp D         &kp F                                                              &kp RBKT  &kp J   &kp K   &kp L   &kp SEMI  &trans
+&kp B       &kp LCTRL       &kp Z      &kp X      &kp C         &kp V   &kp LEFT_SHIFT  &trans     &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans    &kp PG_UP
+&kp LCTRL   &kp LEFT_ALT    &kp PG_DN  &kp PG_UP  &kp LEFT_GUI          &kp SPACE       &kp ENTER  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans    &kp PG_DN
+            >;
+
+            label = "GAMING";
         };
 
         layer_Colemak {
@@ -430,39 +623,26 @@
             >;
         };
 
-        layer_Magic {
+        layer_SunakuSymbols {
             bindings = <
-&to 0        &none            &none            &sys_reset       &bt BT_CLR                                                                                         &bt BT_CLR_ALL   &none  &none  &none  &sys_reset
-&none        &none            &none            &none            &none            &none                                                             &none           &none            &none  &none  &none  &none
-&none        &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI  &rgb_ug RGB_TOG                                                   &rgb_ug RGB_ON  &rgb_ug RGB_OFF  &none  &none  &none  &none
-&none        &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF                                                   &none           &none            &none  &none  &none  &none
-&bootloader  &none            &none            &none            &none            &bootloader      &bt_2  &bt_3  &none         &none  &none  &none  &bootloader     &none            &none  &none  &none  &bootloader
-&none        &none            &none            &none            &none                             &bt_0  &bt_1  &out OUT_USB  &none  &none  &none                  &none            &none  &none  &none  &none
+&trans         &trans          &trans                &trans                 &trans                                                                                          &trans          &trans       &trans        &trans        &trans
+&trans         &kp GRAVE       &kp LS(LPAR)          &kp LS(RPAR)           &kp SEMI         &kp COMMA                                                            &trans    &trans          &trans       &trans        &trans        &trans
+&kp LS(EXCL)   &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp QUESTION                                                         &kp SEMI  &kp LEFT_SHIFT  &kp LCTRL    &kp LEFT_ALT  &kp LEFT_GUI  &trans
+&kp LS(POUND)  &kp LS(CARET)   &kp MINUS             &kp LS(UNDER)          &kp LS(DLLR)     &kp LS(STAR)                                                         &kp DOT   &kp BSPC        &kp TAB      &kp SPACE     &kp RET       &trans
+&kp LS(TILDE)  &kp LS(LT)      &kp LS(PIPE)          &kp EQUAL              &kp LS(GT)       &kp FSLH      &trans  &trans  &trans  &kp BSLH       &trans  &trans  &kp FSLH  &kp DEL         &kp LS(TAB)  &trans        &trans        &trans
+&kp LS(AT)     &kp LS(AMPS)    &kp LBKT              &kp RBKT               &kp LS(PLUS)                   &trans  &trans  &trans  &kp LS(PRCNT)  &trans  &trans            &kp LS(LPAR)    &kp LBKT     &kp RBKT      &kp LS(RPAR)  &trans
             >;
         };
 
-        layer_Apps {
+        layer_Lower {
             bindings = <
-&to 0   &kp F2                 &kp F3                 &kp F4                 &kp F5                                                                                                         &kp F6                 &kp F7                 &kp F8                 &kp F9                 &kp F10
-&kp F1  &none                  &none                  &none                  &none                  &none                                                            &none                  &none                  &none                  &none                  &none                  &kp F11
-&none   &kp LG(LS(LC(LA(Q))))  &kp LG(LS(LC(LA(W))))  &kp LG(LS(LC(LA(E))))  &kp LG(LS(LC(LA(R))))  &kp LG(LS(LC(LA(T))))                                            &kp LG(LS(LC(LA(Y))))  &kp LG(LS(LC(LA(U))))  &kp LG(LS(LC(LA(I))))  &kp LG(LS(LC(LA(O))))  &kp LG(LS(LC(LA(P))))  &kp F12
-&none   &kp LG(LS(LC(LA(A))))  &kp LG(LS(LC(LA(S))))  &kp LG(LS(LC(LA(D))))  &kp LG(LS(LC(LA(F))))  &kp LG(LS(LC(LA(G))))                                            &kp LG(LS(LC(LA(H))))  &kp LG(LS(LC(LA(J))))  &kp LG(LS(LC(LA(K))))  &kp LG(LS(LC(LA(L))))  &none                  &none
-&none   &kp LG(LS(LC(LA(Z))))  &kp LG(LS(LC(LA(X))))  &kp LG(LS(LC(LA(C))))  &kp LG(LS(LC(LA(V))))  &kp LG(LS(LC(LA(B))))  &none  &none  &none  &none  &none  &none  &kp LG(LS(LC(LA(N))))  &kp LG(LS(LC(LA(M))))  &none                  &none                  &none                  &none
-&none   &none                  &none                  &none                  &none                                         &none  &none  &none  &none  &none  &none                         &none                  &none                  &none                  &none                  &to 6
+&rgb_tog_layer0  &kp F2    &kp F3                    &kp F4            &kp F5                                                                                                                           &kp F6      &kp F7        &kp F8        &kp F9           &kp F10
+&kp F1           &kp O     &kp C_PREVIOUS            &kp C_PLAY_PAUSE  &kp C_NEXT                 &kp T                                                                          &kp LEFT_PARENTHESIS   &kp KP_NUM  &kp KP_EQUAL  &kp KP_SLASH  &kp KP_MULTIPLY  &kp F11
+&kp D            &kp N     &kp LS(LG(L))             &kp LG(LA(L))     &kp LA(Y)                  &kp LA(X)                                                                      &kp RIGHT_PARENTHESIS  &kp KP_N7   &kp KP_N8     &kp KP_N9     &kp KP_MINUS     &kp F12
+&kp I            &kp A     &kp LS(LG(LEFT_BRACKET))  &kp LG(B)         &kp LS(LG(RIGHT_BRACKET))  &kp LS(BACKSPACE)                                                              &kp PERCENT            &kp KP_N4   &kp KP_N5     &kp KP_N6     &kp KP_PLUS      &kp K_MUTE
+&kp LSHFT        &kp Z     &kp J                     &kp SPACE         &kp L                      &kp BACKSPACE      &trans  &trans  &trans           &to 9  &trans  &caps_word  &kp COMMA              &kp KP_N1   &kp KP_N2     &kp KP_N3     &kp KP_ENTER     &kp C_VOLUME_UP
+&kp LCTRL        &kp LALT  &kp I                     &kp O             &trans                                        &trans  &trans  &rgb_tog_layer0  &to 8  &trans  &trans                             &kp KP_N0   &kp KP_N0     &kp KP_DOT    &kp KP_ENTER     &kp C_VOL_DN
             >;
-        };
-
-        layer_Gaming {
-            bindings = <
-&to 0       &trans          &trans     &trans     &trans                                                                                     &trans  &trans  &trans  &trans    &trans
-&kp ESCAPE  &trans          &trans     &trans     &trans        &trans                                                             &trans    &trans  &trans  &trans  &trans    &trans
-&kp TAB     &kp T           &kp Q      &kp W      &kp E         &kp R                                                              &trans    &trans  &trans  &trans  &trans    &trans
-&kp G       &kp LEFT_SHIFT  &kp A      &kp S      &kp D         &kp F                                                              &kp RBKT  &kp J   &kp K   &kp L   &kp SEMI  &trans
-&kp B       &kp LCTRL       &kp Z      &kp X      &kp C         &kp V   &kp LEFT_SHIFT  &trans     &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans    &kp PG_UP
-&kp LCTRL   &kp LEFT_ALT    &kp PG_DN  &kp PG_UP  &kp LEFT_GUI          &kp SPACE       &kp ENTER  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans    &kp PG_DN
-            >;
-
-            label = "GAMING";
         };
 
         layer_DavinciResolve {
@@ -478,36 +658,14 @@
             label = "DAVINCI_RESOLVE";
         };
 
-        layer_SunakuSymbols {
+        layer_Apps {
             bindings = <
-&trans         &trans          &trans                &trans                 &trans                                                                                          &trans          &trans       &trans        &trans        &trans
-&trans         &kp GRAVE       &kp LS(LPAR)          &kp LS(RPAR)           &kp SEMI         &kp COMMA                                                            &trans    &trans          &trans       &trans        &trans        &trans
-&kp LS(EXCL)   &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp QUESTION                                                         &kp SEMI  &kp LEFT_SHIFT  &kp LCTRL    &kp LEFT_ALT  &kp LEFT_GUI  &trans
-&kp LS(POUND)  &kp LS(CARET)   &kp MINUS             &kp LS(UNDER)          &kp LS(DLLR)     &kp LS(STAR)                                                         &kp DOT   &kp BSPC        &kp TAB      &kp SPACE     &kp RET       &trans
-&kp LS(TILDE)  &kp LS(LT)      &kp LS(PIPE)          &kp EQUAL              &kp LS(GT)       &kp FSLH      &trans  &trans  &trans  &kp BSLH       &trans  &trans  &kp FSLH  &kp DEL         &kp LS(TAB)  &trans        &trans        &trans
-&kp LS(AT)     &kp LS(AMPS)    &kp LBKT              &kp RBKT               &kp LS(PLUS)                   &trans  &trans  &trans  &kp LS(PRCNT)  &trans  &trans            &kp LS(LPAR)    &kp LBKT     &kp RBKT      &kp LS(RPAR)  &trans
-            >;
-        };
-
-        Numpad {
-            bindings = <
-&trans  &trans    &trans     &trans  &trans                                                                                             &trans   &trans  &trans     &trans    &trans
-&trans  &trans    &trans     &trans  &trans   &kp RS(N8)                                                                    &kp RS(N8)  &trans   &trans  &trans     &trans    &trans
-&trans  &kp BSPC  &kp N7     &kp N8  &kp N9   &kp FSLH                                                                      &kp FSLH    &kp N7   &kp N8  &kp N9     &kp BSPC  &trans
-&trans  &kp DEL   &kp N4     &kp N5  &kp N6   &kp EQUAL                                                                     &kp EQUAL   &kp N4   &kp N5  &kp N6     &trans    &trans
-&trans  &trans    &kp N1     &kp N2  &kp N3   &kp MINUS   &kp LC(A)  &kp LC(C)  &kp LC(V)  &kp RC(A)  &kp RC(C)  &kp RC(V)  &kp MINUS   &kp N1   &kp N2  &kp N3     &trans    &trans
-&trans  &trans    &kp ENTER  &kp N0  &kp DOT              &kp RSHFT  &kp ENTER  &kp BSPC   &kp DEL    &kp ENTER  &kp RSHFT              &kp DOT  &kp N0  &kp ENTER  &trans    &trans
-            >;
-        };
-
-        Maya {
-            bindings = <
-&trans  &trans    &trans               &trans               &trans                                                                                          &trans  &trans  &trans  &trans  &trans
-&trans  &trans    &trans               &trans               &trans               &kp F8                                                             &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans    &mt RA(N1) NUMBER_1  &mt N2 RA(NUMBER_2)  &mt N3 RA(NUMBER_4)  &trans                                                             &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp BSLH  &kp W                &kp E                &kp R                &kp S                                                              &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &mo 9     &mt A LEFT_BRACKET   &mt F RIGHT_BRACKET  &kp MINUS            &kp EQUAL  &kp X     &kp C      &kp SPACE  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp BSLH  &kp LCTRL            &kp RA(V)            &kp RSHFT                       &kp RALT  &kp RC(Z)  &kp LC(Y)  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&to 0   &kp F2                 &kp F3                 &kp F4                 &kp F5                                                                                                         &kp F6                 &kp F7                 &kp F8                 &kp F9                 &kp F10
+&kp F1  &none                  &none                  &none                  &none                  &none                                                            &none                  &none                  &none                  &none                  &none                  &kp F11
+&none   &kp LG(LS(LC(LA(Q))))  &kp LG(LS(LC(LA(W))))  &kp LG(LS(LC(LA(E))))  &kp LG(LS(LC(LA(R))))  &kp LG(LS(LC(LA(T))))                                            &kp LG(LS(LC(LA(Y))))  &kp LG(LS(LC(LA(U))))  &kp LG(LS(LC(LA(I))))  &kp LG(LS(LC(LA(O))))  &kp LG(LS(LC(LA(P))))  &kp F12
+&none   &kp LG(LS(LC(LA(A))))  &kp LG(LS(LC(LA(S))))  &kp LG(LS(LC(LA(D))))  &kp LG(LS(LC(LA(F))))  &kp LG(LS(LC(LA(G))))                                            &kp LG(LS(LC(LA(H))))  &kp LG(LS(LC(LA(J))))  &kp LG(LS(LC(LA(K))))  &kp LG(LS(LC(LA(L))))  &none                  &none
+&none   &kp LG(LS(LC(LA(Z))))  &kp LG(LS(LC(LA(X))))  &kp LG(LS(LC(LA(C))))  &kp LG(LS(LC(LA(V))))  &kp LG(LS(LC(LA(B))))  &none  &none  &none  &none  &none  &none  &kp LG(LS(LC(LA(N))))  &kp LG(LS(LC(LA(M))))  &none                  &none                  &none                  &none
+&none   &none                  &none                  &none                  &none                                         &none  &none  &none  &none  &none  &none                         &none                  &none                  &none                  &none                  &to 8
             >;
         };
     };
