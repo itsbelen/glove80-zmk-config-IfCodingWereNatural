@@ -567,12 +567,12 @@
 
         Maya {
             bindings = <
-&kp ESCAPE        &kp RA(B)          &trans               &trans               &trans                                                                                                               &trans    &trans        &trans          &trans           &trans
-&kp DEL           &kp RC(D)          &trans               &trans               &trans                   &kp F8                                                                          &kp RS(N8)  &kp N7    &kp N8        &kp N9          &kp BACKSPACE    &trans
-&kp A             &kp F              &mt RA(N1) NUMBER_1  &mt N2 RA(NUMBER_2)  &mt N3 RA(NUMBER_4)      &kp H                                                                           &kp FSLH    &kp N4    &kp N5        &kp N6          &kp DEL          &trans
-&kp LBKT          &kp RIGHT_BRACKET  &hml RA(W) W         &kp E                &hml LEFT_SHIFT RIGHT    &kp S                                                                           &kp EQUAL   &kp N1    &kp N2        &kp N3          &kp LBKT         &kp RBKT
-&kp BSLH          &mo_rgb_maya2num   &qt A LEFT_BRACKET   &qt F RIGHT_BRACKET  &hml LEFT_CONTROL MINUS  &kp EQUAL  &kp X     &kp C      &trans     &kp RC(A)  &kp RC(C)      &kp RC(V)  &kp MINUS   &kp DOT   &kp N0        &kp ENTER       &kp A            &kp F
-&kp LEFT_CONTROL  &mo_rgb_maya2nav   &kp RA(V)            &kp SPACE            &kp RA(LEFT_SHIFT)                  &kp RALT  &kp RC(Z)  &kp LC(Y)  &kp SPACE  &kp BACKSPACE  &kp LSHFT              &kp LEFT  &kp UP_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
+&kp ESCAPE        &kp RA(B)          &trans               &trans               &trans                                                                                                                &trans    &trans        &trans          &trans           &trans
+&kp DEL           &kp RC(D)          &trans               &trans               &trans                    &kp F8                                                                          &kp RS(N8)  &kp N7    &kp N8        &kp N9          &kp BACKSPACE    &trans
+&kp A             &kp F              &mt RA(N1) NUMBER_1  &mt N2 RA(NUMBER_2)  &mt N3 RA(NUMBER_4)       &kp H                                                                           &kp FSLH    &kp N4    &kp N5        &kp N6          &kp DEL          &trans
+&kp LBKT          &kp RIGHT_BRACKET  &hml RA(W) W         &kp E                &hml LEFT_CONTROL R       &kp S                                                                           &kp EQUAL   &kp N1    &kp N2        &kp N3          &kp LBKT         &kp RBKT
+&kp BSLH          &mo_rgb_maya2num   &qt A LEFT_BRACKET   &qt F RIGHT_BRACKET  &kp LEFT_SHIFT            &kp EQUAL  &kp X     &kp C      &trans     &kp RC(A)  &kp RC(C)      &kp RC(V)  &kp MINUS   &kp DOT   &kp N0        &kp ENTER       &kp A            &kp F
+&kp LEFT_CONTROL  &mo_rgb_maya2nav   &kp RA(V)            &kp SPACE            &qt RA(LEFT_SHIFT) MINUS             &kp RALT  &kp RC(Z)  &kp LC(Y)  &kp SPACE  &kp BACKSPACE  &kp LSHFT              &kp LEFT  &kp UP_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
             >;
         };
 
