@@ -537,12 +537,12 @@
 
         Maya {
             bindings = <
-&trans           &trans            &trans               &trans               &trans                                                                                                       &trans    &trans        &trans          &trans           &trans
-&trans           &trans            &trans               &trans               &trans               &kp F8                                                                      &kp RS(N8)  &kp N7    &kp N8        &kp N9          &kp BACKSPACE    &trans
-&trans           &trans            &mt RA(N1) NUMBER_1  &mt N2 RA(NUMBER_2)  &mt N3 RA(NUMBER_4)  &trans                                                                      &kp FSLH    &kp N4    &kp N5        &kp N6          &kp DEL          &trans
-&trans           &mo_rgb_maya2num  &kp W                &kp E                &kp R                &kp S                                                                       &kp EQUAL   &kp N1    &kp N2        &kp N3          &kp LBKT         &kp RBKT
-&trans           &mo_rgb_maya2nav  &qt A LEFT_BRACKET   &qt F RIGHT_BRACKET  &kp MINUS            &kp EQUAL  &kp X     &kp C      &trans     &kp RC(A)  &kp RC(C)  &kp RC(V)  &kp MINUS   &kp DOT   &kp N0        &kp ENTER       &kp A            &kp F
-&rgb_tog_layer0  &kp LEFT_CONTROL  &kp BSLH             &kp RA(V)            &kp RSHFT                       &kp RALT  &kp RC(Z)  &kp LC(Y)  &kp SPACE  &trans     &kp LSHFT              &kp LEFT  &kp UP_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &rgb_tog_layer0
+&trans           &trans            &trans               &trans               &trans                                                                                                           &trans    &trans        &trans          &trans           &trans
+&trans           &trans            &trans               &trans               &trans               &kp F8                                                                          &kp RS(N8)  &kp N7    &kp N8        &kp N9          &kp BACKSPACE    &trans
+&trans           &trans            &mt RA(N1) NUMBER_1  &mt N2 RA(NUMBER_2)  &mt N3 RA(NUMBER_4)  &trans                                                                          &kp FSLH    &kp N4    &kp N5        &kp N6          &kp DEL          &trans
+&trans           &mo_rgb_maya2num  &kp W                &kp E                &kp R                &kp S                                                                           &kp EQUAL   &kp N1    &kp N2        &kp N3          &kp LBKT         &kp RBKT
+&trans           &mo_rgb_maya2nav  &qt A LEFT_BRACKET   &qt F RIGHT_BRACKET  &kp MINUS            &kp EQUAL  &kp X     &kp C      &trans     &kp RC(A)  &kp RC(C)      &kp RC(V)  &kp MINUS   &kp DOT   &kp N0        &kp ENTER       &kp A            &kp F
+&rgb_tog_layer0  &kp LEFT_CONTROL  &kp BSLH             &kp RA(V)            &kp RSHFT                       &kp RALT  &kp RC(Z)  &kp LC(Y)  &kp SPACE  &kp BACKSPACE  &kp LSHFT              &kp LEFT  &kp UP_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
             >;
         };
 
@@ -559,12 +559,12 @@
 
         Numpad {
             bindings = <
-&trans           &trans        &trans     &trans  &trans                                                                                             &trans   &trans  &trans     &trans    &trans
-&trans           &trans        &trans     &trans  &trans   &kp RS(N8)                                                                    &kp RS(N8)  &trans   &trans  &trans     &trans    &trans
-&trans           &kp BSPC      &kp N7     &kp N8  &kp N9   &kp FSLH                                                                      &kp FSLH    &kp N7   &kp N8  &kp N9     &kp BSPC  &trans
-&trans           &kp DEL       &kp N4     &kp N5  &kp N6   &kp EQUAL                                                                     &kp EQUAL   &kp N4   &kp N5  &kp N6     &trans    &trans
-&trans           &trans        &kp N1     &kp N2  &kp N3   &kp MINUS   &kp LC(A)  &kp LC(C)  &kp LC(V)  &kp RC(A)  &kp RC(C)  &kp RC(V)  &kp MINUS   &kp N1   &kp N2  &kp N3     &trans    &trans
-&rgb_tog_layer0  &rgb_to_maya  &kp ENTER  &kp N0  &kp DOT              &kp RSHFT  &kp ENTER  &kp BSPC   &kp DEL    &kp ENTER  &kp RSHFT              &kp DOT  &kp N0  &kp ENTER  &trans    &rgb_tog_layer0
+&trans           &trans        &trans     &trans  &trans                                                                                                   &trans   &trans  &trans     &trans      &trans
+&trans           &trans        &trans     &trans  &trans   &kp RS(N8)                                                                          &kp RS(N8)  &trans   &trans  &trans     &trans      &trans
+&trans           &kp BSPC      &kp N7     &kp N8  &kp N9   &kp FSLH                                                                            &kp FSLH    &kp N7   &kp N8  &kp N9     &kp BSPC    &trans
+&trans           &kp DEL       &kp N4     &kp N5  &kp N6   &kp EQUAL                                                                           &kp EQUAL   &kp N4   &kp N5  &kp N6     &kp DELETE  &trans
+&trans           &trans        &kp N1     &kp N2  &kp N3   &kp MINUS   &kp LC(A)  &kp LC(C)  &kp LC(V)  &kp RC(A)        &kp RC(C)  &kp RC(V)  &kp MINUS   &kp N1   &kp N2  &kp N3     &trans      &trans
+&rgb_tog_layer0  &rgb_to_maya  &kp ENTER  &kp N0  &kp DOT              &kp RSHFT  &kp ENTER  &kp BSPC   &rgb_tog_layer0  &kp ENTER  &kp RSHFT              &kp DOT  &kp N0  &kp ENTER  &trans      &trans
             >;
         };
 
