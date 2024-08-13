@@ -578,12 +578,12 @@
 
         Emoji_Layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                                                                  &trans        &trans       &trans        &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans        &trans       &trans        &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans        &trans       &trans        &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &kp EXCL      &EmojiSmile  &EmojiSmile   &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp QUESTION  &EmojiMeh    &EmojiBigSad  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans          &trans        &trans       &trans        &trans  &trans
+&trans  &trans  &trans  &trans  &trans                                                                  &trans        &trans            &trans             &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans        &trans            &trans             &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans        &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &kp EXCL      &EmojiSmile       &EmojiSmile        &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp QUESTION  &EmojiMeh         &EmojiBigSad       &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans          &trans        &trans            &trans             &trans  &trans
             >;
         };
 
