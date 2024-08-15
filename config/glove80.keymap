@@ -581,7 +581,7 @@
 &trans  &trans  &trans  &trans  &trans                                                                  &trans        &trans            &trans             &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans        &trans            &trans             &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans        &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &kp EXCL      &EmojiSmile       &EmojiSmile        &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &kp EXCL      &EmojiSmile       &EmojiBigSMILE     &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp QUESTION  &EmojiMeh         &EmojiBigSad       &trans  &trans
 &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans          &trans        &trans            &trans             &trans  &trans
             >;
@@ -600,12 +600,12 @@
 
         nav {
             bindings = <
-&trans  &trans  &trans          &trans          &trans                                                                                                 &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans          &trans          &trans           &trans                                                                        &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans          &trans          &trans           &trans                                                                        &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans          &kp UP_ARROW    &trans           &kp LC(A)                                                                     &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &BoldItalics  &trans            &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp RC(X)       &kp LC(C)       &kp LC(V)                      &kp LEFT_CONTROL  &kp LEFT_WIN  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans          &trans          &trans                                                                                                 &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans          &trans          &trans           &trans                                                                        &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans          &trans          &trans           &trans                                                                        &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans          &kp UP_ARROW    &trans           &trans                                                                        &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp RC(A)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &BoldItalics  &trans            &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &kp RC(X)       &kp LC(C)       &kp LC(V)                      &kp LEFT_CONTROL  &kp LEFT_WIN  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
