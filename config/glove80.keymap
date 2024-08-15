@@ -603,20 +603,20 @@
 &trans  &trans     &trans          &trans          &trans                                                                                                 &trans  &trans  &trans  &trans  &trans
 &trans  &trans     &trans          &trans          &trans           &trans                                                                        &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans     &trans          &trans          &trans           &trans                                                                        &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans     &trans          &kp UP_ARROW    &trans           &trans                                                                        &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp RC(A)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &BoldItalics  &trans            &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans     &kp RC(X)       &kp LC(C)       &kp LC(V)                      &kp LEFT_CONTROL  &kp LEFT_WIN  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &kp LC(Y)  &kp LC(I)       &kp UP_ARROW    &kp LC(B)        &kp LC(X)                                                                     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp RC(Z)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &BoldItalics  &trans            &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &kp RC(A)       &kp LC(C)       &kp LC(V)                      &kp LEFT_CONTROL  &kp LEFT_WIN  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
         nav_apple {
             bindings = <
-&trans  &trans  &trans          &trans          &trans                                                                                               &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans          &trans          &trans           &trans                                                                      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans          &trans          &trans           &trans                                                                      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp LG(I)       &kp UP_ARROW    &trans           &kp LG(A)                                                                   &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LG(B)  &trans         &trans     &trans         &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp LG(X)       &kp LG(C)       &kp LG(V)                   &kp BACKSPACE  &kp ENTER  &kp LS(ENTER)  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans          &trans          &trans                                                                                               &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans          &trans          &trans           &trans                                                                      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans          &trans          &trans           &trans                                                                      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LG(Y)  &kp LG(X)       &kp UP_ARROW    &kp I            &kp LG(A)                                                                   &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LG(Z)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LG(B)  &trans         &trans     &trans         &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &kp LG(A)       &kp LG(C)       &kp LG(V)                   &kp BACKSPACE  &kp ENTER  &kp LS(ENTER)  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
