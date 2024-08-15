@@ -582,8 +582,8 @@
 &trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans        &trans            &trans             &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans        &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &kp EXCL      &EmojiSmile       &EmojiBigSMILE     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp QUESTION  &EmojiMeh         &EmojiBigSad       &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans          &trans        &trans            &trans             &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp QUESTION  &EmojiMeh         &EmojiBigSad       &trans  &kp PAGE_UP
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans          &trans        &trans            &trans             &trans  &kp PAGE_DOWN
             >;
         };
 
