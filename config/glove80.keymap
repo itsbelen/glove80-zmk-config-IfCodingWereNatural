@@ -369,12 +369,12 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&mo 3>,
+                <&mo 4>,
                 <&macro_tap>,
                 <&rgb_ug RGB_COLOR_HSB(117,100,21)>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&mo 3>,
+                <&mo 4>,
                 <&macro_tap>,
                 <&rgb_ug RGB_COLOR_HSB(182,100,28)>;
         };
@@ -399,12 +399,12 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&mo 3>,
+                <&mo 4>,
                 <&macro_tap>,
                 <&rgb_ug RGB_COLOR_HSB(108,100,23)>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&mo 3>,
+                <&mo 4>,
                 <&macro_tap>,
                 <&rgb_ug RGB_COLOR_HSB(265,100,27)>;
         };
@@ -417,12 +417,12 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&mo 3>,
+                <&mo 5>,
                 <&macro_tap>,
                 <&rgb_ug RGB_COLOR_HSB(72,100,31)>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&mo 3>,
+                <&mo 5>,
                 <&macro_tap>,
                 <&rgb_ug RGB_COLOR_HSB(265,100,27)>;
         };
