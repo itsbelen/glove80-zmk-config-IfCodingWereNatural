@@ -132,7 +132,7 @@
             label = "LAYER_TAP_DANCE";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mo 10>, <&to 10>;
+            bindings = <&mo 11>, <&to 11>;
         };
 
         rpi: require_prior_idle {
@@ -254,9 +254,9 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_tap>,
-                <&to 10>,
+                <&to 11>,
                 <&macro_tap>,
-                <&rgb_ug RGB_COLOR_HSB(126,100,33)>;
+                <&rgb_ug RGB_COLOR_HSB(360,100,33)>;
 
             label = "TOG_LAYER1_RGB";
         };
@@ -266,14 +266,14 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&mo 11>,
+                <&mo 8>,
                 <&macro_tap>,
                 <&rgb_ug RGB_COLOR_HSB(233,99,30)>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&mo 11>,
+                <&mo 8>,
                 <&macro_tap>,
-                <&rgb_ug RGB_COLOR_HSB(131,100,30)>;
+                <&rgb_ug RGB_COLOR_HSB(357,100,30)>;
 
             label = "RGB_MO_LAYER6";
         };
@@ -371,7 +371,7 @@
                 <&macro_press>,
                 <&mo 4>,
                 <&macro_tap>,
-                <&rgb_ug RGB_COLOR_HSB(117,100,21)>,
+                <&rgb_ug RGB_COLOR_HSB(360,100,21)>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
                 <&mo 4>,
@@ -401,7 +401,7 @@
                 <&macro_press>,
                 <&mo 4>,
                 <&macro_tap>,
-                <&rgb_ug RGB_COLOR_HSB(108,100,23)>,
+                <&rgb_ug RGB_COLOR_HSB(360,100,23)>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
                 <&mo 4>,
@@ -432,11 +432,23 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_tap>,
-                <&to 8>,
+                <&to 9>,
                 <&macro_tap>,
                 <&rgb_ug RGB_COLOR_HSB(40,100,25)>;
 
             label = "RGB_TOG_FN";
+        };
+
+        rgb_to_games: rgb_to_gaming {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&to 1>,
+                <&macro_tap>,
+                <&rgb_ug RGB_COLOR_HSB(124,100,23)>;
+
+            label = "RGB_TO_GAMING";
         };
     };
 };
@@ -490,12 +502,12 @@
         #binding-cells = <0>;
         bindings =
             <&macro_press>,
-            <&mo 9>,
+            <&mo 10>,
             <&macro_tap>,
             <&rgb_ug RGB_COLOR_HSB(128,100,100)>,
             <&macro_pause_for_release>,
             <&macro_release>,
-            <&mo 9>,
+            <&mo 10>,
             <&macro_tap>,
             <&rgb_ug RGB_COLOR_HSB(300,100,50)>;
     };
@@ -537,9 +549,9 @@
         };
 
         magic_layer {
-            bindings = <&magic 9 0>;
+            bindings = <&magic 10 0>;
             key-positions = <68 65>;
-            layers = <0 10>;
+            layers = <0 11>;
             require-prior-idle-ms = <200>;
         };
 
@@ -548,6 +560,13 @@
             key-positions = <78 79>;
             require-prior-idle-ms = <150>;
             layers = <0 3 1>;
+        };
+
+        to_gaming {
+            bindings = <&rgb_to_games>;
+            key-positions = <50 51 49>;
+            require-prior-idle-ms = <150>;
+            layers = <1 0 3 7 8 11>;
         };
     };
 
@@ -560,7 +579,7 @@
 &kp EQUAL              &kp N1            &kp N2               &kp N3           &kp N4             &kp N5                                                                                              &kp N6  &kp N7             &kp N8             &kp N9                &kp N0              &kp MINUS
 &kp TAB                &kp Q             &kp W                &kp E            &kp R              &kp T                                                                                               &kp Y   &kp U              &kp I              &kp O                 &kp P               &mo_rgb_num
 &mo_rgb_num            &kp A             &hml LEFT_CONTROL S  &hml LEFT_WIN D  &hml LEFT_SHIFT F  &kp G                                                                                               &kp H   &hmr LEFT_SHIFT J  &hmr LEFT_WIN K    &hmr RIGHT_CONTROL L  &lt 2 SEMICOLON     &kp SQT
-&kp LEFT_CONTROL       &kp Z             &kp X                &kp C            &kp V              &kp B   &kp RIGHT_ALT   &kp DEL              &magic 9 0    &kp CAPSLOCK  &caps_word     &kp ESCAPE  &kp N   &kp M              &kp COMMA          &kp DOT               &qt FSLH RS(SLASH)  &kp BACKSLASH
+&kp LEFT_CONTROL       &kp Z             &kp X                &kp C            &kp V              &kp B   &kp RIGHT_ALT   &kp DEL              &magic 10 0   &kp CAPSLOCK  &caps_word     &kp ESCAPE  &kp N   &kp M              &kp COMMA          &kp DOT               &qt FSLH RS(SLASH)  &kp BACKSLASH
 &rgb_mo_base2Applenav  &rgb_mo_base2nav  &kp Z                &kp RS(ENTER)    &kp LGUI                   &kp LEFT_SHIFT  &qt RS(ENTER) ENTER  &rgb_to_maya  &rgb_to_num   &kp BACKSPACE  &kp SPACE           &kp LEFT           &kp UP_ARROW       &kp DOWN_ARROW        &kp RIGHT           &kp ENTER
             >;
         };
@@ -642,6 +661,19 @@
             >;
         };
 
+        layer_Gaming {
+            bindings = <
+&to 0       &trans          &trans     &trans     &trans                                                                                     &trans  &trans  &trans  &trans    &trans
+&kp ESCAPE  &trans          &trans     &trans     &trans        &trans                                                             &trans    &trans  &trans  &trans  &trans    &trans
+&kp TAB     &kp T           &kp Q      &kp W      &kp E         &kp R                                                              &trans    &trans  &trans  &trans  &trans    &trans
+&kp G       &kp LEFT_SHIFT  &kp A      &kp S      &kp D         &kp F                                                              &kp RBKT  &kp J   &kp K   &kp L   &kp SEMI  &trans
+&kp B       &kp LCTRL       &kp Z      &kp X      &kp C         &kp V   &kp LEFT_SHIFT  &trans     &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans    &kp PG_UP
+&kp LCTRL   &kp LEFT_ALT    &kp PG_DN  &kp PG_UP  &kp LEFT_GUI          &kp SPACE       &kp ENTER  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans    &kp PG_DN
+            >;
+
+            label = "GAMING";
+        };
+
         maya_num {
             bindings = <
 &trans  &trans    &trans     &trans  &trans                                                                                             &trans   &trans  &trans     &trans    &trans
@@ -676,19 +708,6 @@
             >;
         };
 
-        layer_Gaming {
-            bindings = <
-&to 0       &trans          &trans     &trans     &trans                                                                                     &trans  &trans  &trans  &trans    &trans
-&kp ESCAPE  &trans          &trans     &trans     &trans        &trans                                                             &trans    &trans  &trans  &trans  &trans    &trans
-&kp TAB     &kp T           &kp Q      &kp W      &kp E         &kp R                                                              &trans    &trans  &trans  &trans  &trans    &trans
-&kp G       &kp LEFT_SHIFT  &kp A      &kp S      &kp D         &kp F                                                              &kp RBKT  &kp J   &kp K   &kp L   &kp SEMI  &trans
-&kp B       &kp LCTRL       &kp Z      &kp X      &kp C         &kp V   &kp LEFT_SHIFT  &trans     &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans    &kp PG_UP
-&kp LCTRL   &kp LEFT_ALT    &kp PG_DN  &kp PG_UP  &kp LEFT_GUI          &kp SPACE       &kp ENTER  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans    &kp PG_DN
-            >;
-
-            label = "GAMING";
-        };
-
         layer_Colemak {
             bindings = <
 &trans  &trans       &trans           &trans           &trans                                                                  &trans  &trans            &trans            &trans       &trans
@@ -718,7 +737,7 @@
 &kp D            &kp N     &kp LS(LG(L))             &kp LG(LA(L))     &kp LA(Y)                  &kp LA(X)                                                                       &kp RIGHT_PARENTHESIS  &kp KP_N7   &kp KP_N8     &kp KP_N9     &kp KP_MINUS     &kp F12
 &kp I            &kp A     &kp LS(LG(LEFT_BRACKET))  &kp LG(B)         &kp LS(LG(RIGHT_BRACKET))  &kp LS(BACKSPACE)                                                               &kp PERCENT            &kp KP_N4   &kp KP_N5     &kp KP_N6     &kp KP_PLUS      &kp K_MUTE
 &kp LSHFT        &kp Z     &kp J                     &kp SPACE         &kp L                      &kp BACKSPACE      &trans  &trans  &trans           &to 12  &trans  &caps_word  &kp COMMA              &kp KP_N1   &kp KP_N2     &kp KP_N3     &kp KP_ENTER     &kp C_VOLUME_UP
-&kp LCTRL        &kp LALT  &kp I                     &kp O             &trans                                        &trans  &trans  &rgb_tog_layer0  &to 11  &trans  &trans                             &kp KP_N0   &kp KP_N0     &kp KP_DOT    &kp KP_ENTER     &kp C_VOL_DN
+&kp LCTRL        &kp LALT  &kp I                     &kp O             &trans                                        &trans  &trans  &rgb_tog_layer0  &to 8   &trans  &trans                             &kp KP_N0   &kp KP_N0     &kp KP_DOT    &kp KP_ENTER     &kp C_VOL_DN
             >;
         };
 
@@ -742,7 +761,7 @@
 &none   &kp LG(LS(LC(LA(Q))))  &kp LG(LS(LC(LA(W))))  &kp LG(LS(LC(LA(E))))  &kp LG(LS(LC(LA(R))))  &kp LG(LS(LC(LA(T))))                                            &kp LG(LS(LC(LA(Y))))  &kp LG(LS(LC(LA(U))))  &kp LG(LS(LC(LA(I))))  &kp LG(LS(LC(LA(O))))  &kp LG(LS(LC(LA(P))))  &kp F12
 &none   &kp LG(LS(LC(LA(A))))  &kp LG(LS(LC(LA(S))))  &kp LG(LS(LC(LA(D))))  &kp LG(LS(LC(LA(F))))  &kp LG(LS(LC(LA(G))))                                            &kp LG(LS(LC(LA(H))))  &kp LG(LS(LC(LA(J))))  &kp LG(LS(LC(LA(K))))  &kp LG(LS(LC(LA(L))))  &none                  &none
 &none   &kp LG(LS(LC(LA(Z))))  &kp LG(LS(LC(LA(X))))  &kp LG(LS(LC(LA(C))))  &kp LG(LS(LC(LA(V))))  &kp LG(LS(LC(LA(B))))  &none  &none  &none  &none  &none  &none  &kp LG(LS(LC(LA(N))))  &kp LG(LS(LC(LA(M))))  &none                  &none                  &none                  &none
-&none   &none                  &none                  &none                  &none                                         &none  &none  &none  &none  &none  &none                         &none                  &none                  &none                  &none                  &to 11
+&none   &none                  &none                  &none                  &none                                         &none  &none  &none  &none  &none  &none                         &none                  &none                  &none                  &none                  &to 8
             >;
         };
     };
