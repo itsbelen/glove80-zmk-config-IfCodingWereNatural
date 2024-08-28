@@ -293,12 +293,12 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&mo 3>,
+                <&mo 4>,
                 <&macro_tap>,
                 <&rgb_ug RGB_COLOR_HSB(56,100,32)>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&mo 3>,
+                <&mo 4>,
                 <&macro_tap>,
                 <&rgb_ug RGB_COLOR_HSB(265,100,27)>;
         };
@@ -308,7 +308,7 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_tap>,
-                <&to 1>,
+                <&to 2>,
                 <&macro_tap>,
                 <&rgb_ug RGB_COLOR_HSB(184,100,33)>;
 
@@ -351,12 +351,12 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&mo 3>,
+                <&mo 4>,
                 <&macro_tap>,
                 <&rgb_ug RGB_COLOR_HSB(56,100,32)>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&mo 3>,
+                <&mo 4>,
                 <&macro_tap>,
                 <&rgb_ug RGB_COLOR_HSB(182,100,28)>;
         };
@@ -369,12 +369,12 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&mo 4>,
+                <&mo 5>,
                 <&macro_tap>,
                 <&rgb_ug RGB_COLOR_HSB(360,100,21)>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&mo 4>,
+                <&mo 5>,
                 <&macro_tap>,
                 <&rgb_ug RGB_COLOR_HSB(182,100,28)>;
         };
@@ -384,7 +384,7 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_tap>,
-                <&to 3>,
+                <&to 4>,
                 <&macro_tap>,
                 <&rgb_ug RGB_COLOR_HSB(67,100,29)>;
 
@@ -399,12 +399,12 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&mo 4>,
+                <&mo 5>,
                 <&macro_tap>,
                 <&rgb_ug RGB_COLOR_HSB(360,100,23)>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&mo 4>,
+                <&mo 5>,
                 <&macro_tap>,
                 <&rgb_ug RGB_COLOR_HSB(265,100,27)>;
         };
@@ -417,12 +417,12 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&mo 5>,
+                <&mo 6>,
                 <&macro_tap>,
                 <&rgb_ug RGB_COLOR_HSB(299,100,31)>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&mo 5>,
+                <&mo 6>,
                 <&macro_tap>,
                 <&rgb_ug RGB_COLOR_HSB(265,100,27)>;
         };
@@ -444,7 +444,7 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_tap>,
-                <&to 1>,
+                <&to 2>,
                 <&macro_tap>,
                 <&rgb_ug RGB_COLOR_HSB(124,100,23)>;
 
@@ -456,7 +456,7 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_tap>,
-                <&to 6>,
+                <&to 1>,
                 <&macro_tap>,
                 <&rgb_ug RGB_COLOR_HSB(223,100,25)>;
 
@@ -534,30 +534,16 @@
 
         toggle_tomaya {
             bindings = <&rgb_to_maya>;
-            key-positions = <66 67 68>;
-            layers = <0>;
-            require-prior-idle-ms = <150>;
-        };
-
-        switch-tab-left {
-            bindings = <&kp LG(LA(LEFT))>;
-            key-positions = <75 76>;
-            layers = <0>;
-            require-prior-idle-ms = <150>;
-        };
-
-        switch-tab-right {
-            bindings = <&kp LG(LA(RIGHT))>;
-            key-positions = <76 77>;
+            key-positions = <>;
             layers = <0>;
             require-prior-idle-ms = <150>;
         };
 
         to_base {
             bindings = <&rgb_tog_layer0>;
-            key-positions = <67 68 66>;
+            key-positions = <75 76 77>;
             require-prior-idle-ms = <150>;
-            layers = <3 1 6 8 12>;
+            layers = <4 2 8 12>;
         };
 
         magic_layer {
@@ -569,23 +555,28 @@
 
         ShiftEnter {
             bindings = <&kp RS(ENTER)>;
-            key-positions = <78 79>;
+            key-positions = <61 62>;
             require-prior-idle-ms = <150>;
-            layers = <0 3 1>;
+            layers = <0 4 2>;
         };
 
         to_gaming {
             bindings = <&rgb_to_games>;
-            key-positions = <50 51 49>;
+            key-positions = <58 59 60>;
             require-prior-idle-ms = <150>;
-            layers = <1 0 3 7 8 12>;
+            layers = <2 0 4 7 8 12>;
         };
 
         to_bumHand {
             bindings = <&BUMhandMaya>;
-            key-positions = <52 53 54>;
+            key-positions = <75 76 77>;
             require-prior-idle-ms = <150>;
-            layers = <3 1 8 0>;
+            layers = <4 2 8 0>;
+        };
+
+        enter {
+            bindings = <&kp ENTER>;
+            key-positions = <60 59>;
         };
     };
 
@@ -594,19 +585,30 @@
 
         layer_Base {
             bindings = <
-&kp GRAVE              &rgb_tog_FN       &rgb_ug RGB_BRD      &rgb_ug RGB_BRI  &kp BACKSLASH                                                                                                                  &kp LEFT_BRACKET   &kp RIGHT_BRACKET  &kp F8                &kp PRINTSCREEN     &kp F11
-&kp EQUAL              &kp N1            &kp N2               &kp N3           &kp N4             &kp N5                                                                                              &kp N6  &kp N7             &kp N8             &kp N9                &kp N0              &kp MINUS
-&kp TAB                &kp Q             &kp W                &kp E            &kp R              &kp T                                                                                               &kp Y   &kp U              &kp I              &kp O                 &kp P               &mo_rgb_num
-&mo_rgb_num            &kp A             &hml LEFT_CONTROL S  &hml LEFT_WIN D  &hml LEFT_SHIFT F  &kp G                                                                                               &kp H   &hmr LEFT_SHIFT J  &hmr LEFT_WIN K    &hmr RIGHT_CONTROL L  &lt 2 SEMICOLON     &kp SQT
-&kp LEFT_CONTROL       &kp Z             &kp X                &kp C            &kp V              &kp B   &kp RIGHT_ALT   &kp DEL              &magic 11 0   &kp CAPSLOCK  &caps_word     &kp ESCAPE  &kp N   &kp M              &kp COMMA          &kp DOT               &qt FSLH RS(SLASH)  &kp BACKSLASH
-&rgb_mo_base2Applenav  &rgb_mo_base2nav  &kp Z                &kp RS(ENTER)    &kp LGUI                   &kp LEFT_SHIFT  &qt RS(ENTER) ENTER  &rgb_to_maya  &rgb_to_num   &kp BACKSPACE  &kp SPACE           &kp LEFT           &kp UP_ARROW       &kp DOWN_ARROW        &kp RIGHT           &kp ENTER
+&kp GRAVE              &rgb_tog_FN       &rgb_ug RGB_BRD      &rgb_ug RGB_BRI  &kp BACKSLASH                                                                                                                      &kp LEFT_BRACKET   &kp RIGHT_BRACKET  &kp F8                &kp PRINTSCREEN     &kp F11
+&kp EQUAL              &kp N1            &kp N2               &kp N3           &kp N4             &kp N5                                                                                                  &kp N6  &kp N7             &kp N8             &kp N9                &kp N0              &kp MINUS
+&kp ESCAPE             &kp Q             &kp W                &kp E            &kp R              &kp T                                                                                                   &kp Y   &kp U              &kp I              &kp O                 &kp P               &hmr RIGHT_WIN DEL
+&kp TAB                &kp A             &hml LEFT_CONTROL S  &hml LEFT_WIN D  &hml LEFT_SHIFT F  &kp G                                                                                                   &kp H   &hmr LEFT_SHIFT J  &hmr LEFT_WIN K    &hmr RIGHT_CONTROL L  &lt 3 SEMICOLON     &kp SQT
+&kp LEFT_CONTROL       &kp Z             &kp X                &kp C            &kp V              &kp B   &kp RIGHT_ALT   &kp DEL              &magic 11 0   &kp CAPSLOCK  &kp ENTER      &kp LEFT_SHIFT  &kp N   &kp M              &kp COMMA          &kp DOT               &qt FSLH RS(SLASH)  &kp BACKSLASH
+&rgb_mo_base2Applenav  &rgb_mo_base2nav  &kp Z                &kp RS(ENTER)    &kp LGUI                   &kp LEFT_SHIFT  &qt RS(ENTER) ENTER  &rgb_to_maya  &kp LC(Z)     &kp BACKSPACE  &kp SPACE               &kp LEFT           &kp UP_ARROW       &kp DOWN_ARROW        &kp RIGHT           &kp ENTER
+            >;
+        };
+
+        BumMaya {
+            bindings = <
+&trans            &trans            &trans  &trans  &trans                                                                                                             &trans    &trans        &trans          &trans           &trans
+&trans            &trans            &trans  &trans  &trans     &trans                                                                                      &kp RS(N8)  &kp N7    &kp N8        &kp N9          &kp BACKSPACE    &kp PRINTSCREEN
+&trans            &trans            &trans  &trans  &trans     &trans                                                                                      &kp FSLH    &kp N4    &kp N5        &kp N6          &BoldItalics     &trans
+&trans            &trans            &trans  &trans  &trans     &trans                                                                                      &kp EQUAL   &kp N1    &kp N2        &kp N3          &kp LC(A)        &kp RC(C)
+&trans            &mo_rgb_maya2num  &trans  &trans  &trans     &trans  &kp LCTRL  &kp LC(Z)       &kp LC(Y)           &kp RC(A)  &kp RC(C)      &kp RC(V)  &kp MINUS   &kp DOT   &kp N0        &kp ENTER       &kp RC(X)        &kp RC(V)
+&mo_rgb_maya2nav  &kp LEFT_CONTROL  &trans  &trans  &kp RA(W)          &kp RALT   &kp LEFT_SHIFT  &kp RA(LEFT_SHIFT)  &kp ENTER  &kp BACKSPACE  &kp LSHFT              &kp LEFT  &kp UP_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
             >;
         };
 
         Maya {
             bindings = <
 &kp ESCAPE        &kp RA(B)          &trans               &trans               &trans                                                                                                                &trans    &trans        &trans          &trans           &trans
-&kp DEL           &kp RC(D)          &trans               &kp LC(S)            &kp LC(RA(S))             &kp F8                                                                          &kp RS(N8)  &kp N7    &kp N8        &kp N9          &kp BACKSPACE    &trans
+&kp DEL           &kp RC(D)          &trans               &kp LC(S)            &kp LC(RA(S))             &kp F8                                                                          &kp RS(N8)  &kp N7    &kp N8        &kp N9          &kp BACKSPACE    &kp PRINTSCREEN
 &kp A             &kp F              &mt RA(N1) NUMBER_1  &mt N2 RA(NUMBER_2)  &mt N3 RA(NUMBER_4)       &kp H                                                                           &kp FSLH    &kp N4    &kp N5        &kp N6          &kp DEL          &trans
 &kp LBKT          &kp RIGHT_BRACKET  &hml RA(W) W         &kp E                &hml LEFT_CONTROL R       &kp S                                                                           &kp EQUAL   &kp N1    &kp N2        &kp N3          &kp LBKT         &kp RBKT
 &kp BSLH          &mo_rgb_maya2num   &kp X                &kp C                &kp LEFT_SHIFT            &kp EQUAL  &kp X     &kp C      &trans     &kp RC(A)  &kp RC(C)      &kp RC(V)  &kp MINUS   &kp DOT   &kp N0        &kp ENTER       &kp A            &kp F
@@ -655,17 +657,6 @@
 &trans  &kp LG(Y)  &kp LG(X)       &kp UP_ARROW    &kp I            &kp LG(A)                                                                   &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp LG(Z)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LG(B)  &trans         &trans     &trans         &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans     &kp LG(A)       &kp LG(C)       &kp LG(V)                   &kp BACKSPACE  &kp ENTER  &kp LS(ENTER)  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-
-        mayaBUMhand {
-            bindings = <
-&kp ESCAPE        &kp RA(B)          &trans               &trans               &trans                                                                                                                              &trans    &trans        &trans          &trans           &trans
-&kp DEL           &kp RC(D)          &trans               &kp LC(S)            &kp LC(RA(S))             &kp F8                                                                                        &kp RS(N8)  &kp N7    &kp N8        &kp N9          &kp BACKSPACE    &trans
-&kp A             &kp F              &mt RA(N1) NUMBER_1  &mt N2 RA(NUMBER_2)  &mt N3 RA(NUMBER_4)       &kp H                                                                                         &kp FSLH    &kp N4    &kp N5        &kp N6          &kp DEL          &trans
-&kp LBKT          &kp RIGHT_BRACKET  &hml RA(W) W         &kp E                &hml LEFT_CONTROL R       &kp S                                                                                         &kp EQUAL   &kp N1    &kp N2        &kp N3          &kp LBKT         &kp RBKT
-&kp BSLH          &mo_rgb_maya2num   &kp X                &kp C                &kp LEFT_SHIFT            &kp EQUAL  &kp X     &kp C           &trans              &kp RC(A)  &kp RC(C)      &kp RC(V)  &kp MINUS   &kp DOT   &kp N0        &kp ENTER       &kp A            &kp F
-&kp LEFT_CONTROL  &kp LEFT_CONTROL   &kp RA(V)            &kp SPACE            &qt RA(LEFT_SHIFT) MINUS             &kp RALT  &kp LEFT_SHIFT  &kp RA(LEFT_SHIFT)  &kp ENTER  &kp BACKSPACE  &kp LSHFT              &kp LEFT  &kp UP_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
             >;
         };
 
