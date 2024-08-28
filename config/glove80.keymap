@@ -578,6 +578,20 @@
             bindings = <&kp ENTER>;
             key-positions = <60 59>;
         };
+
+        maya2baseLhand {
+            bindings = <&rgb_tog_layer0>;
+            key-positions = <66 67 68>;
+            require-prior-idle-ms = <150>;
+            layers = <4 2 8 12 1>;
+        };
+
+        tomayaLhand {
+            bindings = <&BUMhandMaya>;
+            key-positions = <66 67 68>;
+            require-prior-idle-ms = <150>;
+            layers = <4 2 8 0>;
+        };
     };
 
     keymap {
