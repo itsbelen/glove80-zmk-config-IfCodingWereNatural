@@ -543,7 +543,7 @@
             bindings = <&rgb_tog_layer0>;
             key-positions = <75 76 77>;
             require-prior-idle-ms = <150>;
-            layers = <4 2 8 12>;
+            layers = <4 2 8 12 1>;
         };
 
         magic_layer {
