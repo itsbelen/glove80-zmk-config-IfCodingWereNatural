@@ -599,12 +599,12 @@
 
         layer_Base {
             bindings = <
-&kp GRAVE         &rgb_tog_FN  &rgb_ug RGB_BRD      &rgb_ug RGB_BRI  &kp BACKSLASH                                                                                                                     &kp LEFT_BRACKET   &kp RIGHT_BRACKET  &kp F8                &kp PRINTSCREEN  &kp F11
-&kp EQUAL         &kp N1       &kp N2               &kp N3           &kp N4             &kp N5                                                                                                 &kp N6  &kp N7             &kp N8             &kp N9                &kp N0           &kp MINUS
-&kp ESCAPE        &kp Q        &kp W                &kp E            &kp R              &kp T                                                                                                  &kp Y   &kp U              &kp I              &kp O                 &kp P            &hmr RIGHT_WIN DEL
-&kp TAB           &kp A        &hml LEFT_CONTROL S  &hml LEFT_WIN D  &hml LEFT_SHIFT F  &kp G                                                                                                  &kp H   &hmr LEFT_SHIFT J  &hmr LEFT_WIN K    &hmr RIGHT_CONTROL L  &lt 3 SEMICOLON  &kp SQT
-&kp LEFT_CONTROL  &kp Z        &kp A                &kp X            &kp C              &kp V   &kp RIGHT_ALT   &mo_rgb_num       &magic 11 0  &kp LC(Y)  &kp ENTER      &kp LEFT_SHIFT        &kp B   &kp N              &kp M              &kp COMMA             &kp DOT          &kp FSLH
-&rgb_mo_base2nav  &kp LEFT     &kp UP               &kp DOWN         &kp RIGHT                  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp ENTER    &kp LC(Z)  &kp BACKSPACE  &qt LEFT_SHIFT SPACE          &kp LEFT           &kp UP_ARROW       &kp DOWN_ARROW        &kp RIGHT        &kp ENTER
+&kp GRAVE         &rgb_tog_FN  &rgb_ug RGB_BRD      &rgb_ug RGB_BRI  &kp BACKSLASH                                                                                                                    &kp LEFT_BRACKET   &kp RIGHT_BRACKET  &kp F8                &kp PRINTSCREEN  &kp F11
+&kp EQUAL         &kp N1       &kp N2               &kp N3           &kp N4             &kp N5                                                                                                &kp N6  &kp N7             &kp N8             &kp N9                &kp N0           &kp MINUS
+&kp ESCAPE        &kp Q        &kp W                &kp E            &kp R              &kp T                                                                                                 &kp Y   &kp U              &kp I              &kp O                 &kp P            &hmr RIGHT_WIN DEL
+&kp TAB           &kp A        &hml LEFT_CONTROL S  &hml LEFT_WIN D  &hml LEFT_SHIFT F  &kp G                                                                                                 &kp H   &hmr LEFT_SHIFT J  &hmr LEFT_WIN K    &hmr RIGHT_CONTROL L  &lt 3 SEMICOLON  &kp SQT
+&kp LEFT_CONTROL  &kp Z        &kp A                &kp X            &kp C              &kp V   &kp RIGHT_ALT  &mo_rgb_num       &magic 11 0  &kp LC(Y)  &kp ENTER      &kp LEFT_SHIFT        &kp B   &kp N              &kp M              &kp COMMA             &kp DOT          &kp FSLH
+&rgb_mo_base2nav  &kp LEFT     &kp A                &kp A            &kp B                      &kp RSHFT      &kp LEFT_CONTROL  &kp ENTER    &kp LC(Z)  &kp BACKSPACE  &qt LEFT_SHIFT SPACE          &kp ENTER          &kp LEFT           &kp UP_ARROW          &kp DOWN         &kp RIGHT
             >;
         };
 
